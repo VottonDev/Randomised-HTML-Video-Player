@@ -38,39 +38,8 @@ CREATE TABLE IF NOT EXISTS `videos` (
 --
 
 INSERT INTO `videos` (`id`, `file`, `name`) VALUES
-(1, 'AMS.webm', '1'),
-(2, 'AnatoToKoibito.webm', '2'),
-(3, 'Anime-KirinoMosaic.webm', '3'),
-(4, 'Anime-Mirror.webm', '4'),
-(5, 'Anime-Azuki.webm', '5'),
-(6, 'Anime-HealthyFood.webm', '6'),
-(7, 'AnimeAndSiblings.webm', '7'),
-(8, 'AnimeBase.webm', '8'),
-(9, 'AnimeDance.webm', '9'),
-(10, 'AnimeDance2.webm', '10'),
-(11, 'AnimeDance3.webm', '11'),
-(12, 'AnimeMix.webm', '12'),
-(13, 'AnimeRage.webm', '13'),
-(14, 'AnimeRandom2.webm', '14'),
-(15, 'AnimeRandomIntro.webm', '15'),
-(16, 'AnimeRip.webm', '16'),
-(17, 'AnimeSkrillex.webm', '17'),
-(18, 'CandyShop.webm', '18'),
-(19, 'CatAndCar.webm', '19'),
-(20, 'DonaldTrucks.webm', '20'),
-(21, 'DonaldTrucks.webm', '21'),
-(22, 'DonaldTrumpBing.webm', '22'),
-(23, 'DuckS3RL.webm', '23'),
-(24, 'Hentai.webm', '24'),
-(25, 'KantaiCollection.webm', '25'),
-(26, 'LuckyStarRandom.webm', '26'),
-(27, 'RingRing.webm', '27'),
-(28, 'VottonLooksForMemes.webm', '28'),
-(29, 'WindowsShutdown.webm', '29'),
-(30, 'YumeNikki.webm', '30'),
-(31, 'YuruYuri-Random.webm', '31'),
-(32, 'YuruYuriSmoke.webm', '32'),
-(33, 'YuruYuriSong.webm', '33');
+(1, 'video1.webm', '1'),
+(2, 'video2.webm', '2');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
