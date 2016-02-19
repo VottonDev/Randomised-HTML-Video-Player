@@ -31,8 +31,8 @@ if (!$video) {
 	<head>
 		<meta charset="utf-8">
 		
-		<title>72 webms</title>
-		<link rel="icon" type="image/png" href="kawaii.png" />
+		<title>72 webms</title><!-- Modify this line -->
+		<link rel="icon" type="image/png" href="kawaii.png" /> <!-- Same as favicon -->
 	  
 	   <style type="text/css"> 
 			body:hover
@@ -115,9 +115,9 @@ if (!$video) {
    
 	<body bgcolor="#000000" text="white" onLoad="JSFX_StartEffects()" onClick="location.reload()">
 
-	<center><a href='http://steamcommunity.com/groups/Pomfe'>
+	<center><a href='http://steamcommunity.com/groups/Pomfe'> <!-- Text redirects to link -->
 	<span id="h1">
-	<h1>Pomfe-</h1>
+	<h1>Pomfe-</h1> <!-- Text shown in the right corner -->
 	</span>
 	</a></center>
 
