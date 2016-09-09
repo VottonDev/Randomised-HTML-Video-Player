@@ -1,6 +1,11 @@
 # Webm
 <h1>Simple Webm Player.</h1>
 
+<h1>What you need?</h1>
+nginx or apache2
+PHP
+
+<h1>How to setup</h1>
 <ol>
 <ul>1.Throw files to your website's folder.</ul>
 <ul>2.Import sql file to your mysql database.</ul>
@@ -16,3 +21,5 @@ INSERT INTO `videos` (`id`, `file`, `name`) VALUES
 <h1>Extra Info</h1>
 You run that as query.
 Remember to change the number always on the query when you insert a new video.
+
+PS: Yes i know this looks very bad.
