@@ -1,8 +1,10 @@
 <h1>Simple Webm Player.</h1>
 
 <h1>What you need?</h1>
-nginx or apache2
-PHP
+<ol>
+<ul>nginx or apache2</ul>
+<ul>PHP</ul>
+<ul>MySQL Server</ul>
 
 <h1>How to setup</h1>
 <ol>
