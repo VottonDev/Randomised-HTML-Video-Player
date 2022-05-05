@@ -32,7 +32,7 @@ if (!$video) {
 		<meta charset="utf-8">
 		
 		<title>72 webms</title><!-- Modify this line -->
-		<link rel="icon" type="image/png" href="kawaii.png" /> <!-- Same as favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
 	  
 	   <style type="text/css"> 
 			body:hover
@@ -43,7 +43,7 @@ if (!$video) {
 			h1
 			{ 
 				position: fixed;
-				font-family: 'Ranga', Normal;
+                font-family: 'Ranga', Normal, serif;
 				font-size: 80pt;
 				z-index: 100;
 				bottom: -90px;
@@ -53,8 +53,8 @@ if (!$video) {
 			a 
 			{
 				position: static;
-				bottom: 0px;
-				right: 0px;
+				bottom: 0;
+				right: 0;
 				text-decoration: none;
 				z-index: 1000000000000000000000000000;
 			}		
@@ -65,31 +65,33 @@ if (!$video) {
 			{
 				function hex2dec(hex){return(parseInt(hex,16));}
 				function dec2hex(dec){return (dec < 16 ? "0" : "") + dec.toString(16);}
-				var r1 = hex2dec(start.slice(0,2)), g1=hex2dec(start.slice(2,4)), b1=hex2dec(start.slice(4,6));
-				var r2 = hex2dec(end.slice(0,2)),   g2=hex2dec(end.slice(2,4)),   b2=hex2dec(end.slice(4,6));
-				var pc = percent/100;
-				var r  = Math.floor(r1+(pc*(r2-r1)) + .5), g=Math.floor(g1+(pc*(g2-g1)) + .5), b=Math.floor(b1+(pc*(b2-b1)) + .5);
-				return("#" + dec2hex(r) + dec2hex(g) + dec2hex(b));
+
+                const r1 = hex2dec(start.slice(0, 2)), g1 = hex2dec(start.slice(2, 4)), b1 = hex2dec(start.slice(4, 6));
+                const r2 = hex2dec(end.slice(0, 2)), g2 = hex2dec(end.slice(2, 4)), b2 = hex2dec(end.slice(4, 6));
+                const pc = percent / 100;
+                const r = Math.floor(r1 + (pc * (r2 - r1)) + .5), g = Math.floor(g1 + (pc * (g2 - g1)) + .5),
+                    b = Math.floor(b1 + (pc * (b2 - b1)) + .5);
+                return("#" + dec2hex(r) + dec2hex(g) + dec2hex(b));
 			}
 		</script>
 
 		<script>
-			var colors = new Array("339966", "FF0000", "00FF00", "0000FF", "FFFF00", "FF00FF", "00FFFF");
-			var start  = colors[0];
-			var end    = colors[0];
-			var index  = 0;
-			var cindex = 0;
-			var faderObj = new Array();
+            const colors = ["339966", "FF0000", "00FF00", "0000FF", "FFFF00", "FF00FF", "00FFFF"];
+            let start = colors[0];
+            let end = colors[0];
+            let index = 0;
+            let cindex = 0;
+            const faderObj = [];
 
-			function fadeSpan()
+            function fadeSpan()
 			{
-				if(index == 0)
+				if(index === 0)
 				{
 					start = end;
 					end = colors[ cindex = (cindex+1) % colors.length ];
 				}
 
-				for(var i=0 ; i<faderObj.length ; i++)
+				for(let i=0 ; i<faderObj.length ; i++)
 					faderObj[i].style.color = getColor(start, end, index);
 
 				index = (index + 5) % 100;
@@ -99,7 +101,7 @@ if (!$video) {
 			
 			function fadeAll()
 			{
-				for(var i=0 ; i<arguments.length ; i++)
+				for(let i=0 ; i<arguments.length ; i++)
 					faderObj[i] = document.getElementById(arguments[i]);
 
 				fadeSpan();
