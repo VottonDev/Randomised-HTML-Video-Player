@@ -31,7 +31,11 @@ if (!$video) {
 	<head>
 		<meta charset="utf-8">
 		
-		<title>72 webms</title><!-- Modify this line -->
+		<?php
+		$files = scandir('files');
+		$num_files = count($files);
+		?>
+		<title><?php echo $num_files ?> webms</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 	  
 	   <style type="text/css"> 
