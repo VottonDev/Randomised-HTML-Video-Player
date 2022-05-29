@@ -43,10 +43,10 @@ if (!$video) {
 
 <body bgcolor="#000000" text="white" onLoad="JSFX_StartEffects()" onClick="location.reload()">
 
-	<center><a href='http://steamcommunity.com/groups/Pomfe'>
+	<center><a href='#'>
 			<!-- Text redirects to link -->
 			<span id="h1">
-				<h1>Pomfe-</h1> <!-- Text shown in the right corner -->
+				<h1>Text here-</h1> <!-- Text shown in the right corner -->
 			</span>
 		</a></center>
 
