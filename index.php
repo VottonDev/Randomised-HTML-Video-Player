@@ -30,7 +30,7 @@ if (!$video) {
 
 <head>
 	<meta charset="utf-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php
 		$files = scandir('files');
 		$num_files = count($files);
