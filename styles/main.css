@@ -2,6 +2,11 @@ body:hover {
     cursor: pointer;
 }
 
+@font-face {
+    font-family: 'Ranga';
+    src: url('styles/fonts/Ranga-Regular.ttf');
+}
+
 h1 {
     position: fixed;
     font-family: 'Ranga', Normal, serif;

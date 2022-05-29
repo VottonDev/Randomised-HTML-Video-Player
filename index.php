@@ -21,13 +21,12 @@ $video = $res->fetch_object();
 $mysqli->close();
 
 if (!$video) {
-  echo "No video found.";
+  echo "No videos found.";
 }
 
 ?>
 
 <html lang=en>
-<link href='http://fonts.googleapis.com/css?family=Ranga' rel='stylesheet' type='text/css'>
 
 <head>
 	<meta charset="utf-8">
@@ -111,7 +110,7 @@ if (!$video) {
 	<video
 		style="position: fixed; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: no-repeat; background-size: cover; "
 		src="<?php echo $webm_path . $video->file; ?>" autoplay loop>
-		Your browser doesn't support the video tag.
+		<p>Your browser doesn't support the video tag.</p>
 	</video>
 
 	<body bgcolor="#000000" text="white" onLoad="JSFX_StartEffects()">
