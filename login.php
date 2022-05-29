@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 // Login to website
 if (isset($_POST['username']) && isset($_POST['password'])) {
   $username = $_POST['username'];

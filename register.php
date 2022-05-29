@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 // Disable registrations
 $registration_enabled = false;
 
