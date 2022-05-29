@@ -34,7 +34,7 @@ if (!$video) {
 	<?php
 		$files = scandir('files');
 		$num_files = count($files);
-		?>
+	?>
 	<title><?php echo $num_files ?> webms</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="styles/main.css">
@@ -50,8 +50,8 @@ if (!$video) {
 			</span>
 		</a></center>
 
-	<video
-		style="position: fixed; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: no-repeat; background-size: cover; "
+	<video 
+		id="video"
 		src="<?php echo $webm_path . $video->file; ?>" autoplay loop>
 		<p>Your browser doesn't support the video tag.</p>
 	</video>
