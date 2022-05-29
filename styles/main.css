@@ -1,0 +1,20 @@
+body:hover {
+    cursor: pointer;
+}
+
+h1 {
+    position: fixed;
+    font-family: 'Ranga', Normal, serif;
+    font-size: 80pt;
+    z-index: 100;
+    bottom: -90px;
+    right: 10px;
+}
+
+a {
+    position: static;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    z-index: 1000000000000000000000000000;
+}
