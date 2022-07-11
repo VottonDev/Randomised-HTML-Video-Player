@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $file_destination = 'files/' . $file_name_new;
     move_uploaded_file($file_tmp, $file_destination);
     // INSERT INTO `videos` (`id`, `file`, `name`) VALUES
-    $mysqli->query("INSERT INTO `videos` (`file`, `name`) VALUES ('$file_name_new', '$file_name')");
+    $mysqli->query("INSERT INTO `videos` (`file`, `name`) VALUES (':file_name_new', ':file_name')");
   }
 }
 ?>
