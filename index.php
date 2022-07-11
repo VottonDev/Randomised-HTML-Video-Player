@@ -43,12 +43,12 @@ if (!$video) {
 
 <body bgcolor="#000000" text="white" onLoad="JSFX_StartEffects()" onClick="location.reload()">
 
-	<center><a href='#'>
+	<div class="center"><a href='#'>
 			<!-- Text redirects to link -->
 			<span id="h1">
 				<h1>Text here-</h1> <!-- Text shown in the right corner -->
 			</span>
-		</a></center>
+		</a></div>
 
 	<video 
 		id="video"

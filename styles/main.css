@@ -38,3 +38,11 @@ a {
     background: no-repeat;
     background-size: cover;
 }
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
