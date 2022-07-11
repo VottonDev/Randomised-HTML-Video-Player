@@ -3,25 +3,25 @@ require_once('config.php');
 
 $mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 if ($mysqli->connect_errno) {
-  echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
 if (!$res = $mysqli->query("SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `videos` ")) {
-  echo "Failed to retrieve offset: " . $mysqli->error;
+    echo "Failed to retrieve offset: " . $mysqli->error;
 }
 
 $offset_row = $res->fetch_object();
 $offset = $offset_row->offset;
 
 if (!$res = $mysqli->query("SELECT * FROM `videos` LIMIT $offset, 1")) {
-  echo "Failed to retrieve video: " . $mysqli->error;
+    echo "Failed to retrieve video: " . $mysqli->error;
 }
 
 $video = $res->fetch_object();
 $mysqli->close();
 
 if (!$video) {
-  echo "No videos found.";
+    echo "No videos found.";
 }
 
 ?>
@@ -32,9 +32,9 @@ if (!$video) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php
-		$files = scandir('files');
-		$num_files = count($files);
-	?>
+        $files = scandir('files');
+        $num_files = count($files);
+    ?>
 	<title><?php echo $num_files ?> webms</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="styles/main.css">
@@ -50,7 +50,7 @@ if (!$video) {
 			</span>
 		</a></div>
 
-	<video 
+	<video
 		id="video"
 		src="<?php echo $webm_path . $video->file; ?>" autoplay loop>
 		<p>Your browser doesn't support the video tag.</p>
