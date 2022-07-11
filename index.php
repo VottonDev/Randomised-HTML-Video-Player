@@ -50,7 +50,7 @@ if (!$video) {
 			</span>
 		</a></center>
 
-	<video 
+	<video
 		id="video"
 		src="<?php echo $webm_path . $video->file; ?>" autoplay loop>
 		<p>Your browser doesn't support the video tag.</p>
