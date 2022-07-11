@@ -1,7 +1,7 @@
 <?php
 // If $_SESSION['username'] is set, then the user is logged in
 if (isset($_SESSION['username'])) {
-  echo "Welcome, " . $_SESSION['username'] . "!";
+    echo "Welcome, " . $_SESSION['username'] . "!";
 } else {
     echo "You are not logged in";
     // Redirect back to login page
