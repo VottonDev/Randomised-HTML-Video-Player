@@ -6,15 +6,12 @@ if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
-if (!$res = $mysqli->query("SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `videos` ")) {
-    echo "Failed to retrieve offset: " . $mysqli->error;
+// Fetch a random video from the database
+if (!$res = $mysqli->query("SELECT * FROM videos ORDER BY RAND() LIMIT 1")) {
+	echo "Failed to query database: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
-if (!$res = $mysqli->query("SELECT * FROM `videos` LIMIT 1 OFFSET " . $res->fetch_assoc()['offset'])) {
-    echo "Failed to retrieve video: " . $mysqli->error;
-}
-
-$video = $res->fetch_object();
+$video = $res->fetch_assoc();
 $mysqli->close();
 
 if (!$video) {
