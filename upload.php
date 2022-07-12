@@ -1,4 +1,5 @@
 <?php
+
 require_once('mysql-connector.php');
 
 // Add submitted video from admin.php to the database
