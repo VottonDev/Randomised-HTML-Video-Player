@@ -10,10 +10,7 @@ if (!$res = $mysqli->query("SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `vi
     echo "Failed to retrieve offset: " . $mysqli->error;
 }
 
-$offset_row = $res->fetch_object();
-$offset = $offset_row->offset;
-
-if (!$res = $mysqli->query("SELECT * FROM `videos` LIMIT $offset, 1")) {
+if (!$res = $mysqli->query("SELECT * FROM `videos` LIMIT 1 OFFSET " . $res->fetch_assoc()['offset'])) {
     echo "Failed to retrieve video: " . $mysqli->error;
 }
 
