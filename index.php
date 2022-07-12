@@ -1,10 +1,5 @@
 <?php
-require_once('config.php');
-
-$mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+require_once('sql-connector.php');
 
 // Fetch a random video from the database
 if (!$res = $mysqli->query("SELECT * FROM videos ORDER BY RAND() LIMIT 1")) {
