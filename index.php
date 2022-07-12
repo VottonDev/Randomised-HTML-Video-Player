@@ -3,7 +3,7 @@ require_once('sql-connector.php');
 
 // Fetch a random video from the database
 if (!$res = $mysqli->query("SELECT * FROM videos ORDER BY RAND() LIMIT 1")) {
-	echo "Failed to query database: (" . $mysqli->errno . ") " . $mysqli->error;
+    echo "Failed to query database: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
 $video = $res->fetch_assoc();
