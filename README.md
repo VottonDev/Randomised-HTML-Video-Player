@@ -1,26 +1,11 @@
-<h1>Simple Webm Player.</h1>
+# Simple PHP Video Player
 
-<h1>What you need?</h1>
-<ol>
-<ul>nginx or apache2</ul>
-<ul>PHP</ul>
-<ul>MySQL Server</ul>
+## What do you need?
 
-<h1>How to setup</h1>
-<ol>
-<ul>1.Throw files to your website's folder.</ul>
-<ul>2.Import sql file to your mysql database.</ul>
-<ul>3.Throw your webm files to your webm path.</ul>
-<ul>4.Modify MySQL Video Table to your likings.</ul>
-</ol>
+Nginx or Apache2<br>
+PHP<br>
+MySQL Server
 
+## How do I add new videos?
 
-<h1>How to add more webms:</h1>
-INSERT INTO `videos` (`id`, `file`, `name`) VALUES
-(1, 'filename.webm', '1');
-
-<h1>Extra Info</h1>
-You run that as query.
-Remember to change the number always on the query when you insert a new video.
-
-PS: Yes i know this looks very bad.
+You can use the admin.php (Admin panel) to add new video files and they'll be automatically added to the database as well.

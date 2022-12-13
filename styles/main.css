@@ -1,0 +1,48 @@
+body:hover {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Ranga';
+    src: url('styles/fonts/Ranga-Regular.ttf');
+}
+
+h1 {
+    position: fixed;
+    font-family: 'Ranga', Normal, serif;
+    font-size: 80pt;
+    z-index: 100;
+    bottom: -90px;
+    right: 10px;
+}
+
+a {
+    position: static;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    z-index: 1000000000000000000000000000;
+}
+
+#video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
